@@ -9,6 +9,7 @@ import React, { PropTypes } from 'react'
 import boundsType from './types/bounds'
 import childrenType from './types/children'
 import latlngType from './types/latlng'
+import CRS from './types/crs.js'
 
 import MapComponent from './MapComponent'
 
@@ -34,11 +35,16 @@ export default class Map extends MapComponent {
     style: PropTypes.object,
     useFlyTo: PropTypes.bool,
     zoom: PropTypes.number,
+    crs: PropTypes.instanceOf(CRS),
   }
 
   static defaultProps = {
     animate: false,
     useFlyTo: false,
+  }
+
+  static crsOptions = {
+    simple: Leaflet.CRS.Simple,
   }
 
   static childContextTypes = {

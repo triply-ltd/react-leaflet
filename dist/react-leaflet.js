@@ -7,7 +7,7 @@
 		exports["ReactLeaflet"] = factory(require("react"), require("leaflet"), require("react-dom"));
 	else
 		root["ReactLeaflet"] = factory(root["React"], root["L"], root["ReactDOM"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_4__, __WEBPACK_EXTERNAL_MODULE_151__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_4__, __WEBPACK_EXTERNAL_MODULE_152__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -115,11 +115,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _MapLayer3 = _interopRequireDefault(_MapLayer2);
 
-	var _Marker2 = __webpack_require__(144);
+	var _Marker2 = __webpack_require__(145);
 
 	var _Marker3 = _interopRequireDefault(_Marker2);
 
-	var _Pane2 = __webpack_require__(145);
+	var _Pane2 = __webpack_require__(146);
 
 	var _Pane3 = _interopRequireDefault(_Pane2);
 
@@ -127,39 +127,39 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Path3 = _interopRequireDefault(_Path2);
 
-	var _Polygon2 = __webpack_require__(148);
+	var _Polygon2 = __webpack_require__(149);
 
 	var _Polygon3 = _interopRequireDefault(_Polygon2);
 
-	var _Polyline2 = __webpack_require__(149);
+	var _Polyline2 = __webpack_require__(150);
 
 	var _Polyline3 = _interopRequireDefault(_Polyline2);
 
-	var _Popup2 = __webpack_require__(150);
+	var _Popup2 = __webpack_require__(151);
 
 	var _Popup3 = _interopRequireDefault(_Popup2);
 
-	var _Rectangle2 = __webpack_require__(152);
+	var _Rectangle2 = __webpack_require__(153);
 
 	var _Rectangle3 = _interopRequireDefault(_Rectangle2);
 
-	var _ScaleControl2 = __webpack_require__(153);
+	var _ScaleControl2 = __webpack_require__(154);
 
 	var _ScaleControl3 = _interopRequireDefault(_ScaleControl2);
 
-	var _TileLayer2 = __webpack_require__(154);
+	var _TileLayer2 = __webpack_require__(155);
 
 	var _TileLayer3 = _interopRequireDefault(_TileLayer2);
 
-	var _Tooltip2 = __webpack_require__(155);
+	var _Tooltip2 = __webpack_require__(156);
 
 	var _Tooltip3 = _interopRequireDefault(_Tooltip2);
 
-	var _WMSTileLayer2 = __webpack_require__(156);
+	var _WMSTileLayer2 = __webpack_require__(157);
 
 	var _WMSTileLayer3 = _interopRequireDefault(_WMSTileLayer2);
 
-	var _ZoomControl2 = __webpack_require__(157);
+	var _ZoomControl2 = __webpack_require__(158);
 
 	var _ZoomControl3 = _interopRequireDefault(_ZoomControl2);
 
@@ -5054,6 +5054,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _latlng2 = _interopRequireDefault(_latlng);
 
+	var _crs = __webpack_require__(144);
+
+	var _crs2 = _interopRequireDefault(_crs);
+
 	var _MapComponent2 = __webpack_require__(90);
 
 	var _MapComponent3 = _interopRequireDefault(_MapComponent2);
@@ -5208,11 +5212,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  minZoom: _react.PropTypes.number,
 	  style: _react.PropTypes.object,
 	  useFlyTo: _react.PropTypes.bool,
-	  zoom: _react.PropTypes.number
+	  zoom: _react.PropTypes.number,
+	  crs: _react.PropTypes.instanceOf(_crs2.default)
 	};
 	Map.defaultProps = {
 	  animate: false,
 	  useFlyTo: false
+	};
+	Map.crsOptions = {
+	  simple: _leaflet2.default.CRS.Simple
 	};
 	Map.childContextTypes = {
 	  map: _react.PropTypes.instanceOf(_leaflet2.default.Map)
@@ -5546,6 +5554,20 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
+	var _react = __webpack_require__(3);
+
+	var _leaflet = __webpack_require__(4);
+
+	exports.default = _react.PropTypes.instanceOf(_leaflet.CRS);
+
+/***/ },
+/* 145 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
 	var _leaflet = __webpack_require__(4);
 
 	var _react = __webpack_require__(3);
@@ -5640,14 +5662,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Marker;
 
 /***/ },
-/* 145 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-	var _uniqueId2 = __webpack_require__(146);
+	var _uniqueId2 = __webpack_require__(147);
 
 	var _uniqueId3 = _interopRequireDefault(_uniqueId2);
 
@@ -5663,7 +5685,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _warning = __webpack_require__(147);
+	var _warning = __webpack_require__(148);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -5845,7 +5867,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Pane;
 
 /***/ },
-/* 146 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var toString = __webpack_require__(25);
@@ -5879,7 +5901,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 147 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5945,7 +5967,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 148 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6016,7 +6038,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Polygon;
 
 /***/ },
-/* 149 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6084,7 +6106,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Polyline;
 
 /***/ },
-/* 150 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6095,7 +6117,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react = __webpack_require__(3);
 
-	var _reactDom = __webpack_require__(151);
+	var _reactDom = __webpack_require__(152);
 
 	var _latlng = __webpack_require__(6);
 
@@ -6238,13 +6260,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Popup;
 
 /***/ },
-/* 151 */
+/* 152 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_151__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_152__;
 
 /***/ },
-/* 152 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6313,7 +6335,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Rectangle;
 
 /***/ },
-/* 153 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6368,7 +6390,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = ScaleControl;
 
 /***/ },
-/* 154 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6433,7 +6455,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = TileLayer;
 
 /***/ },
-/* 155 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6444,7 +6466,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react = __webpack_require__(3);
 
-	var _reactDom = __webpack_require__(151);
+	var _reactDom = __webpack_require__(152);
 
 	var _map = __webpack_require__(10);
 
@@ -6558,7 +6580,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Tooltip;
 
 /***/ },
-/* 156 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6640,7 +6662,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = WMSTileLayer;
 
 /***/ },
-/* 157 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
